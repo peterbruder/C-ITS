@@ -467,7 +467,7 @@ Mehrere Projekte machten deutlich, dass die Nutzung offener, standardisierter Sc
 # AP 1: Herausforderungen
 st.subheader("Herausforderungen von C-ITS in Nordrhein-Westfalen")
 
-st.image("Abbildungen/C_ITS_AP1_Herausforderungen.png", use_container_width=True)
+st.image("Abbildungen/C_ITS_AP1_Herausforderungen.png", width=600)
 
 st.info("Eigene Darstellung (Drashe Bytyqi, 11.07.2025)")
 
@@ -477,7 +477,7 @@ st.info("Eigene Darstellung (Drashe Bytyqi, 11.07.2025)")
 
 st.subheader("Übersicht der Akteure und Ihrer Rollen für die erfolgreiche Implementierung von C-ITS")
 
-show_pdf("Dokumente/C_ITS_AP3_Projektaktuere.pdf", height=2510)
+st.image("Abbildungen/C_ITS_AP3_Projektaktuere.png", height=2510)
 st.info("Eigene Darstellung (Peter Bruder, 09.07.2025)")
 
 ####################################################################################################################################################
