@@ -256,7 +256,7 @@ C-Roads Germany (o. J.): *C-ITS-Dienste*. Online verfügbar unter: [https://ww
 # Karte 
 
 # Load data
-csv_path = "C-ITS_Projekte_Deutschland.csv"
+csv_path = "Dokumente/C-ITS_Projekte_Deutschland.csv"
 df = load_and_clean_data(csv_path)
 
 if df is None or len(df) == 0:
