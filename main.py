@@ -266,7 +266,6 @@ if df is None or len(df) == 0:
     st.error("Daten konnten nicht geladen werden.")
     st.stop()
 
-st.expander("Status quo von C-ITS in Deutschland")
 # Create map
 st.subheader("C-ITS Projekte im DACH-Raum")
 
@@ -470,15 +469,23 @@ Mehrere Projekte machten deutlich, dass die Nutzung offener, standardisierter Sc
 ####################################################################################################################################################
 # AP 1: Herausforderungen
 st.subheader("Herausforderungen von C-ITS in Nordrhein-Westfalen")
+def image_as_base64(path):
+    with open(path, "rb") as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+# Bild konvertieren
+img_base64 = image_as_base64("Abbildungen/C_ITS_AP1_Herausforderungen.png")
+
+# Anzeige im HTML-Container zentriert
 st.markdown(
-    """
+    f"""
     <div style="text-align: center;">
-        <img src="Abbildungen/C_ITS_AP1_Herausforderungen.png" width="800">
+        <img src="data:image/png;base64,{img_base64}" width="800">
     </div>
     """,
     unsafe_allow_html=True
 )
-st.image("Abbildungen/C_ITS_AP1_Herausforderungen.png", width=900)
 
 st.info("Eigene Darstellung (Drashe Bytyqi, 11.07.2025)")
 
