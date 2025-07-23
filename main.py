@@ -263,7 +263,6 @@ if df is None or len(df) == 0:
     st.error("Daten konnten nicht geladen werden.")
     st.stop()
 
-st.expander("Status quo von C-ITS in Deutschland")
 # Create map
 st.subheader("C-ITS Projekte im DACH-Raum")
 
@@ -468,7 +467,7 @@ Mehrere Projekte machten deutlich, dass die Nutzung offener, standardisierter Sc
 # AP 1: Herausforderungen
 st.subheader("Herausforderungen von C-ITS in Nordrhein-Westfalen")
 
-show_pdf("C:/Users/Peter/Desktop/C-ITS NRW/Projektakteure/C_ITS_AP1_Herausforderungen.pdf", height=900)
+show_pdf("Dokumente/C_ITS_AP1_Herausforderungen.pdf", height=900)
 
 st.info("Eigene Darstellung (Drashe Bytyqi, 11.07.2025)")
 
@@ -478,7 +477,7 @@ st.info("Eigene Darstellung (Drashe Bytyqi, 11.07.2025)")
 
 st.subheader("Übersicht der Akteure und Ihrer Rollen für die erfolgreiche Implementierung von C-ITS")
 
-show_pdf("C:/Users/Peter/Desktop/C-ITS NRW/Projektakteure/C_ITS_AP3_Projektaktuere.pdf", height=2510)
+show_pdf("Dokumente/C_ITS_AP3_Projektaktuere.pdf", height=2510)
 st.info("Eigene Darstellung (Peter Bruder, 09.07.2025)")
 
 ####################################################################################################################################################
