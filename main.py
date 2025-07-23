@@ -21,7 +21,7 @@ if not st.session_state["authenticated"]:
     pw = st.text_input("🔒 Passwort eingeben", type="password")
     if pw == CORRECT_PASSWORD:
         st.session_state["authenticated"] = True
-        st.experimental_rerun()  # Seite neu laden, um Passwortfeld auszublenden
+        st.rerun()
     elif pw != "":
         st.error("Falsches Passwort")
     st.stop()
