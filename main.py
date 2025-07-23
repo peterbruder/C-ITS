@@ -9,6 +9,16 @@ import streamlit.components.v1 as components
 from pathlib import Path
 import os
 
+# Passwort definieren
+PASSWORD = "geheim123"
+
+# Passwortabfrage
+pw = st.text_input("🔒 Passwort eingeben:", type="password")
+
+if pw != PASSWORD:
+    st.warning("Bitte Passwort eingeben, um Zugriff zu erhalten.")
+    st.stop()
+
 def show_pdf(file_path, height=600):
     with open(file_path, "rb") as f:
         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
