@@ -9,15 +9,25 @@ import streamlit.components.v1 as components
 from pathlib import Path
 import os
 
-# Passwort definieren
-PASSWORD = "geheim123"
+# Passwort festlegen
+CORRECT_PASSWORD = "geheim123"
 
-# Passwortabfrage
-pw = st.text_input("🔒 Passwort eingeben:", type="password")
+# Initialisierung von Session State
+if "authenticated" not in st.session_state:
+    st.session_state["authenticated"] = False
 
-if pw != PASSWORD:
-    st.warning("Bitte Passwort eingeben, um Zugriff zu erhalten.")
+# Wenn der Nutzer noch nicht eingeloggt ist
+if not st.session_state["authenticated"]:
+    pw = st.text_input("🔒 Passwort eingeben", type="password")
+    if pw == CORRECT_PASSWORD:
+        st.session_state["authenticated"] = True
+        st.experimental_rerun()  # Seite neu laden, um Passwortfeld auszublenden
+    elif pw != "":
+        st.error("Falsches Passwort")
     st.stop()
+
+# ✅ Ab hier wird die App angezeigt
+st.success("✅ Zugang gewährt")
 
 def show_pdf(file_path, height=600):
     with open(file_path, "rb") as f:
