@@ -3,5 +3,3 @@ pandas
 folium
 streamlit-folium
 branca
-re
-base64
