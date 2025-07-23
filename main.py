@@ -37,7 +37,7 @@ st.markdown(
 # Große Logos zentriert in voller Breite
 st.sidebar.image("Abbildungen/LOGO_FH_Muenster.png", use_container_width=True)
 st.sidebar.image("Abbildungen/Logo_FGV.png", use_container_width=True)
-st.sidebar.image("Abbildungen/Abbildungen\Logo_FB_ETI_2.svg", use_container_width=True)
+st.sidebar.image("Abbildungen/Logo_FB_ETI_2.svg", use_container_width=True)
 
 
 def load_and_clean_data(csv_path):
