@@ -494,8 +494,18 @@ st.info("Eigene Darstellung (Drashe Bytyqi, 11.07.2025)")
 # AP 2: Projektakteure
 
 st.subheader("Übersicht der Akteure und Ihrer Rollen für die erfolgreiche Implementierung von C-ITS")
+# Bild konvertieren
+img_base64 = image_as_base64("Abbildungen/C_ITS_AP3_Projektaktuere.png")
 
-st.image("Abbildungen/C_ITS_AP3_Projektaktuere.png", width=900)
+# Anzeige im HTML-Container zentriert
+st.markdown(
+    f"""
+    <div style="text-align: center;">
+        <img src="data:image/png;base64,{img_base64}" width="800">
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 st.info("Eigene Darstellung (Peter Bruder, 09.07.2025)")
 
 ####################################################################################################################################################
