@@ -19,7 +19,7 @@ def show_pdf(file_path, height=600):
 st.set_page_config(layout="wide")
 
 # Bild laden
-with open("Abbildungen\logo-mulnv-farbig_rgb.png", "rb") as f:
+with open("Abbildungen/logo-mulnv-farbig_rgb.png", "rb") as f:
     data = f.read()
     encoded = base64.b64encode(data).decode()
 
