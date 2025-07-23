@@ -10,7 +10,7 @@ from pathlib import Path
 import os
 
 # Passwort festlegen
-CORRECT_PASSWORD = "geheim123"
+CORRECT_PASSWORD = "CITSNRW2025"
 
 # Initialisierung von Session State
 if "authenticated" not in st.session_state:
