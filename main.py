@@ -22,8 +22,8 @@ st.set_page_config(layout="wide")
 with open("Abbildungen/logo-mulnv-farbig_rgb.png", "rb") as f:
     data = f.read()
     encoded = base64.b64encode(data).decode()
-
-st.sidebar.image("logo-mulnv-farbig_rgb.png", use_container_width=True)
+    
+st.sidebar.image("Abbildungen/logo-mulnv-farbig_rgb.png", use_container_width=True)
 st.markdown(
     """
     <style>
