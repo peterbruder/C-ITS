@@ -26,8 +26,6 @@ if not st.session_state["authenticated"]:
         st.error("Falsches Passwort")
     st.stop()
 
-# ✅ Ab hier wird die App angezeigt
-st.success("✅ Zugang gewährt")
 
 def show_pdf(file_path, height=600):
     with open(file_path, "rb") as f:
