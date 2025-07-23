@@ -22,12 +22,7 @@ if password == CORRECT_PASSWORD:
     
     # Hier kommt deine eigentliche App:
     st.title("Systemstudie: Zielorientierte Implementierung von C-ITS in NRW")
-    # ... dein bisheriger Code ...
-
-elif password:
-    st.error("Falsches Passwort. Bitte erneut versuchen.")
-    st.stop()
-
+    
 def show_pdf(file_path, height=600):
     with open(file_path, "rb") as f:
         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
@@ -498,6 +493,10 @@ st.subheader("Übersicht der Akteure und Ihrer Rollen für die erfolgreiche Impl
 
 st.image("Abbildungen/C_ITS_AP3_Projektaktuere.png", width=900)
 st.info("Eigene Darstellung (Peter Bruder, 09.07.2025)")
+
+elif password:
+    st.error("Falsches Passwort. Bitte erneut versuchen.")
+    st.stop()
 
 ####################################################################################################################################################
 #Impressum
