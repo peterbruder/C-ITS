@@ -9,6 +9,25 @@ import streamlit.components.v1 as components
 from pathlib import Path
 import os
 
+
+# Passwort definieren (z. B. als Umgebungsvariable oder hartkodiert)
+CORRECT_PASSWORD = "meinGeheimesPasswort123"
+
+# Passwortfeld anzeigen
+password = st.text_input("Passwort eingeben", type="password")
+
+# Zugriff erlauben
+if password == CORRECT_PASSWORD:
+    st.success("Zugang gewährt.")
+    
+    # Hier kommt deine eigentliche App:
+    st.title("Systemstudie: Zielorientierte Implementierung von C-ITS in NRW")
+    # ... dein bisheriger Code ...
+
+elif password:
+    st.error("Falsches Passwort. Bitte erneut versuchen.")
+    st.stop()
+
 def show_pdf(file_path, height=600):
     with open(file_path, "rb") as f:
         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
@@ -467,7 +486,7 @@ Mehrere Projekte machten deutlich, dass die Nutzung offener, standardisierter Sc
 # AP 1: Herausforderungen
 st.subheader("Herausforderungen von C-ITS in Nordrhein-Westfalen")
 
-st.image("Abbildungen/C_ITS_AP1_Herausforderungen.png", width=1200)
+st.image("Abbildungen/C_ITS_AP1_Herausforderungen.png", width=900)
 
 st.info("Eigene Darstellung (Drashe Bytyqi, 11.07.2025)")
 
@@ -477,7 +496,7 @@ st.info("Eigene Darstellung (Drashe Bytyqi, 11.07.2025)")
 
 st.subheader("Übersicht der Akteure und Ihrer Rollen für die erfolgreiche Implementierung von C-ITS")
 
-st.image("Abbildungen/C_ITS_AP3_Projektaktuere.png", width=1200)
+st.image("Abbildungen/C_ITS_AP3_Projektaktuere.png", width=900)
 st.info("Eigene Darstellung (Peter Bruder, 09.07.2025)")
 
 ####################################################################################################################################################
