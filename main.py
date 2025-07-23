@@ -489,6 +489,18 @@ st.markdown(
 
 st.info("Eigene Darstellung (Drashe Bytyqi, 11.07.2025)")
 
+# PDF-Datei lesen
+with open("Dokumente/C_ITS_AP1_Herausforderungen.pdf", "rb") as f:
+    pdf_data = f.read()
+
+# Download-Button anzeigen
+st.download_button(
+    label="📄 PDF herunterladen: Herausforderungen von C-ITS",
+    data=pdf_data,
+    file_name="C_ITS_AP1_Herausforderungen.pdf",
+    mime="application/pdf"
+)
+
 
 ####################################################################################################################################################
 # AP 2: Projektakteure
@@ -507,6 +519,18 @@ st.markdown(
     unsafe_allow_html=True
 )
 st.info("Eigene Darstellung (Peter Bruder, 09.07.2025)")
+
+# PDF-Datei lesen
+with open("Dokumente/C_ITS_AP3_Projektaktuere.pdf", "rb") as f:
+    pdf_data = f.read()
+
+# Download-Button anzeigen
+st.download_button(
+    label="📄 PDF herunterladen: Projektakteure",
+    data=pdf_data,
+    file_name="C_ITS_AP3_Projektaktuere.pdf",
+    mime="application/pdf"
+)
 
 ####################################################################################################################################################
 #Impressum
