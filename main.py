@@ -15,8 +15,11 @@ def show_pdf(file_path, height=600):
     pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="100%" height="{height}px" type="application/pdf" scrolling="no"></iframe>'
     st.markdown(pdf_display, unsafe_allow_html=True)
 
-#Set Mode auf Wide
-st.set_page_config(layout="wide")
+st.set_page_config(
+    page_title="C-ITS in NRW",       # 👉 Titel im Browser-Tab
+    page_icon="🚦",                  # 👉 Optional: Emoji oder Pfad zu Icon
+    layout="wide"                    # 👉 Optional: Seitenlayout
+)
 
 # Bild laden
 with open("Abbildungen/logo-mulnv-farbig_rgb.png", "rb") as f:
