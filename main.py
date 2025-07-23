@@ -9,16 +9,6 @@ import streamlit.components.v1 as components
 from pathlib import Path
 import os
 
-
-# Passwort definieren (z. B. als Umgebungsvariable oder hartkodiert)
-CORRECT_PASSWORD = "meinGeheimesPasswort123"
-
-# Passwortfeld anzeigen
-password = st.text_input("Passwort eingeben", type="password")
-
-# Zugriff erlauben
-if password == CORRECT_PASSWORD:
-    st.success("Zugang gewährt.")
     
         # Hier kommt deine eigentliche App:
         st.title("Systemstudie: Zielorientierte Implementierung von C-ITS in NRW")
@@ -494,9 +484,6 @@ if password == CORRECT_PASSWORD:
     st.image("Abbildungen/C_ITS_AP3_Projektaktuere.png", width=900)
     st.info("Eigene Darstellung (Peter Bruder, 09.07.2025)")
 
-elif password:
-    st.error("Falsches Passwort. Bitte erneut versuchen.")
-    st.stop()
 
 ####################################################################################################################################################
 #Impressum
