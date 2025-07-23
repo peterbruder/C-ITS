@@ -19,7 +19,7 @@ def show_pdf(file_path, height=600):
 st.set_page_config(layout="wide")
 
 # Bild laden
-with open("logo-mulnv-farbig_rgb.png", "rb") as f:
+with open("Abbildungen\logo-mulnv-farbig_rgb.png", "rb") as f:
     data = f.read()
     encoded = base64.b64encode(data).decode()
 
@@ -35,8 +35,8 @@ st.markdown(
     unsafe_allow_html=True
 )
 # Große Logos zentriert in voller Breite
-st.sidebar.image("LOGO FH_Münster Transparent.png", use_container_width=True)
-st.sidebar.image("Logo_FGV.png", use_container_width=True)
+st.sidebar.image("Abbildungen\LOGO FH_Münster Transparent.png", use_container_width=True)
+st.sidebar.image("Abbildungen\Logo_FGV.png", use_container_width=True)
 st.sidebar.image("Abbildungen\Logo_FB_ETI_2.svg", use_container_width=True)
 
 
@@ -256,7 +256,7 @@ C-Roads Germany (o. J.): *C-ITS-Dienste*. Online verfügbar unter: [https://ww
 # Karte 
 
 # Load data
-csv_path = "C-ITS_Projekte_Deutschland.csv"
+csv_path = "Dokumente/C-ITS_Projekte_Deutschland.csv"
 df = load_and_clean_data(csv_path)
 
 if df is None or len(df) == 0:
