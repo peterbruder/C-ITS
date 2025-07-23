@@ -35,7 +35,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 # Große Logos zentriert in voller Breite
-st.sidebar.image("Abbildungen/LOGO FH_Münster Transparent.png", use_container_width=True)
+st.sidebar.image("LOGO FH_Muenster_Transparent.png", use_container_width=True)
 st.sidebar.image("Abbildungen/Logo_FGV.png", use_container_width=True)
 st.sidebar.image("Abbildungen/Logo_FB_ETI_2.svg", use_container_width=True)
 
